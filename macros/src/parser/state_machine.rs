@@ -1,7 +1,6 @@
 use super::transition::{StateTransition, StateTransitions};
 use syn::{braced, parse, spanned::Spanned, token, Attribute, Ident, Token, Type};
 
-#[derive(Debug)]
 pub struct StateMachine {
     pub temporary_context_type: Option<Type>,
     pub custom_error: bool,

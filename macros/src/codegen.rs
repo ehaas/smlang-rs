@@ -530,7 +530,7 @@ pub fn generate_code(sm: &ParsedStateMachine) -> proc_macro2::TokenStream {
     let custom_error = if sm.custom_error {
         quote! {
             /// The error type returned by guard or action functions.
-            type Error: core::fmt::Debug;
+            type Error;
         }
     } else {
         quote! {}
@@ -611,7 +611,7 @@ pub fn generate_code(sm: &ParsedStateMachine) -> proc_macro2::TokenStream {
         }
 
         /// List of possible errors
-        #[derive(Debug,PartialEq)]
+        #[derive(PartialEq)]
         pub enum #error_type_name  <T=()> {
             /// When an event is processed which should not come in the current state.
             InvalidEvent,

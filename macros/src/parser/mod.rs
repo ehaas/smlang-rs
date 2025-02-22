@@ -20,7 +20,7 @@ use syn::{parse, Attribute, Ident, Type};
 use transition::StateTransition;
 pub type TransitionMap = HashMap<String, HashMap<String, EventMapping>>;
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct AsyncIdent {
     pub ident: Ident,
     pub is_async: bool,
@@ -43,7 +43,6 @@ impl fmt::Display for AsyncIdent {
     }
 }
 
-#[derive(Debug)]
 pub struct ParsedStateMachine {
     pub name: Option<Ident>,
     pub states_attr: Vec<Attribute>,

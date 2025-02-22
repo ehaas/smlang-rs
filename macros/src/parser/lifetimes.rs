@@ -3,7 +3,7 @@ use quote::{quote, ToTokens};
 use std::ops::Sub;
 use syn::{parse, spanned::Spanned, GenericArgument, Lifetime, PathArguments, Type};
 
-#[derive(Default, Debug, Clone)]
+#[derive(Default, Clone)]
 pub struct Lifetimes {
     lifetimes: Vec<Lifetime>,
 }

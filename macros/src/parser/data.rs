@@ -4,7 +4,6 @@ use syn::{parse, spanned::Spanned, Type};
 
 pub type DataTypes = HashMap<String, Type>;
 
-#[derive(Debug)]
 pub struct DataDefinitions {
     pub data_types: DataTypes,
     pub all_lifetimes: Lifetimes,

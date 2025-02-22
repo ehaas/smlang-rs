@@ -1,7 +1,7 @@
 use proc_macro2::Span;
 use syn::{parenthesized, parse, spanned::Spanned, token, Ident, Token, Type};
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct OutputState {
     pub ident: Ident,
     pub internal_transition: bool,

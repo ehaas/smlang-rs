@@ -7,7 +7,7 @@ use quote::quote;
 use std::fmt;
 use syn::{bracketed, parse, token, Ident, Token};
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct StateTransition {
     pub in_state: InputState,
     pub event: Event,
@@ -16,7 +16,6 @@ pub struct StateTransition {
     pub out_state: OutputState,
 }
 
-#[derive(Debug)]
 pub struct StateTransitions {
     pub in_states: Vec<InputState>,
     pub event: Event,
@@ -83,7 +82,7 @@ impl parse::Parse for StateTransitions {
         })
     }
 }
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub enum GuardExpression {
     Guard(AsyncIdent),
     Not(Box<GuardExpression>),

@@ -1,6 +1,6 @@
 use syn::{parenthesized, parse, spanned::Spanned, token, Ident, Token, Type};
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct InputState {
     pub start: bool,
     pub wildcard: bool,
